@@ -1,5 +1,5 @@
-#!/bin/bash
-# redirect permanent
+#!/usr/bin/env bash
+# Configures the nginx server for deployment
 if (( "$(pgrep -c nginx)" > 0)); then
 	echo "Nginx server already installed & running"
 	echo "Now adding redirect_me"
