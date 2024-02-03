@@ -9,8 +9,6 @@ env.hosts = [
         "18.207.141.60",
         "52.91.154.167"
     ]
-env.user = "ubuntu"
-env.key_filename = "key"
 
 def do_deploy(archive_path):
     """
