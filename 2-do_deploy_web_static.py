@@ -13,6 +13,7 @@ def do_deploy(archive_path):
     """
     Function to deploy my web_static
     """
+    run("sudo su")
     remote_path = "/tmp"
 
     # Upload the archive to the remote server
