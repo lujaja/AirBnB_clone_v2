@@ -17,7 +17,6 @@ def do_deploy(archive_path):
     Function to deploy my web_static
     """
     remote_path = "/tmp"
-    archive_path = "versions/web_static_20240203004953.tgz"
 
     # upload the achive to the remote server
     run("mkdir -p /tmp")
