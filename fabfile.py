@@ -9,23 +9,26 @@ env.hosts = [
         "18.207.141.60",
         "52.91.154.167"
     ]
+env.user = "ubuntu"
+env.key_filename = "~/.ssh/school"
 
 def do_deploy(archive_path):
     """
     Function to deploy my web_static
     """
     remote_path = "/tmp"
+    archive_path = "versions/web_static_20240203004953.tgz"
 
     # upload the achive to the remote server
     run("mkdir -p /tmp")
     put(archive_path, remote_path)
 
     # create directories and extract the archive
-    release_path = "/data/web_static/releases"
+    release_path = "/data/web_static/releases/"
     current_path = ""
     # timestamp = run(date "+%Y%m%d%H%M%S")
     run ("mkdir -p {}".format(release_path))
-    run("tar -xvzf /tmp/web_static_20240203004953.tgz {}/web_static".format(
+    run("tar -xvzf /tmp/web_static_20240203004953.tgz {}/web_static".fomart(
         release_path))
     # cleanup
     run("rm /tmp/web_static_20240203004953.tgz")
