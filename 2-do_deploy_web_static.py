@@ -22,6 +22,7 @@ def do_deploy(archive_path):
 
     # create directories and extract the archive
     release_path = "/data/web_static/releases"
+<<<<<<< HEAD
     release_folder = "web_static"
     
     run ("mkdir -p {}/{}".format(release_path, release_folder))
@@ -31,6 +32,13 @@ def do_deploy(archive_path):
         release_path,
         release_folder
     ))
+=======
+    current_path = ""
+    # timestamp = run(date "+%Y%m%d%H%M%S")
+    run ("mkdir -p {}".format(release_path))
+    run("tar -xvzf /tmp/web_static_20240203004953.tgz {}/web_static".format(
+        release_path))
+>>>>>>> e5a9770130a00f50f5b486ae0e1a9676f691bdc7
     # cleanup
     current_path = "/data/web_static/current"
     run("rm -rf {}".format(current_path))i
