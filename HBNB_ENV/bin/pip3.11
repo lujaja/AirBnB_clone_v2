@@ -1,4 +1,4 @@
-#!/home/kali/alx/AirBnB_clone_v2/HBNB_ENV/bin/python3
+#!/home/kali/alx/AirBnB_clone_v2/HBNB_ENV/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -58,11 +58,7 @@ sudo mkdir -p /data/web_static/releases/ /data/web_static/
 echo "<html><body><h1>Hello, this is a test index.html file!</h1></body></html>" | sudo tee /data/web_static/releases/test/index.html > /dev/null
 echo "Done!"
 echo "Creating a symlink ... "
-if [ -L "/data/web_static/current" ]; then
-	sudo rm -f /data/web_static/current
-fi
-
-sudo ln -s /data/web_static/releases/test/ /data/web_static/current
+sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 echo "Symbolic link created: /data/web_static/current -> /data/web_static/releases/test/"
 sudo chown -R ubuntu:ubuntu /data/
 echo "All configuration set now reloading nginx server..."
