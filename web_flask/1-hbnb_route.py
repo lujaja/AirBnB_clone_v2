@@ -1,17 +1,21 @@
 #!/usr/bin/python3
 """
-    This is a simple flask web app
+    This script start a simple web application
 """
 from flask import Flask
-# When you run this script directly name will be set to main
+
 app = Flask(__name__)
 
 
-# Tells flask to call hello function when root URL is accessed
 @app.route("/", strict_slashes=False)
 def hello():
-    """Renders Hello world to the user"""
+    """render home page"""
     return "Hello HBNB!"
+
+
+@app.route("/hbnb", strict_slashes=False)
+def hbnb():
+    return "HBNB"
 
 
 if __name__ == "__main__":
